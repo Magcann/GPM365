@@ -36,7 +36,7 @@ public class Tests  extends BaseTest{
 
 
         //Вводим наименование Бренда
-        $(byXpath("//elma-form-control/elma-type-string/div/input")).sendKeys("auto_test_123456"); // воткнуть переменную на имя бренд
+        $(byXpath("//elma-form-control/elma-type-string/div/input")).sendKeys("auto_test_123456s"); // воткнуть переменную на имя бренд
 //Выбор из справочника рекламодателей
         $(byXpath("(.//*[normalize-space(text()) and normalize-space(.)='Рекламодатель'])[1]/following::button[1]")).click();
 // Выбираем из справочника  бренд
@@ -53,8 +53,8 @@ public class Tests  extends BaseTest{
 
         $(byXpath("//*/text()[normalize-space(.)='Сохранить']/parent::*")).shouldBe(enabled,ofSeconds(5)).click();
 
-        $(byText("auto_test_123456")).shouldBe(enabled,ofSeconds(5));
-        $(byText("auto_test_123456")).click();
+        $(byText("auto_test_123456s")).shouldBe(enabled,ofSeconds(5));
+        $(byText("auto_test_123456s")).click();
         Selenide.sleep(5000);
     }
 
