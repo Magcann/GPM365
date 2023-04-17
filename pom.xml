@@ -92,7 +92,7 @@
                             <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
                             <name>allure.results.directory</name>
                             <value>${basedir}/target/allure-results</value>
-                            <value>C:\Jenkins\workspace\GPM365\allure-results</value>
+                            <value>C:\new\target\allure-results</value>
                             <value>${basedir}/target/allure-reports</value>
                         </property>
                     </systemProperties>
@@ -116,7 +116,7 @@
                 <version>2.11.2</version>
                 <configuration>
                     <reportVersion>2.17.2</reportVersion>
-                    <resultsDirectory>C:\Jenkins\workspace\GPM365\allure-results</resultsDirectory>
+                    <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
                     <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
                 </configuration>
             </plugin>
