@@ -85,15 +85,14 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <systemProperties>
-					 <property> <name>allure.results.directory</name> <value>C:\new\target\allure-results</value></property>
-                        <property>
+			            <property>
                             <name>junit.jupiter.extensions.autodetection.enabled</name>
                             <value>true</value>
                             <name>listener</name>
                             <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
                             <name>allure.results.directory</name>
                             <value>${basedir}/target/allure-results</value>
-                            <name>allure.report.directory</name>
+                            <value>C:\new\target\allure-results</value>
                             <value>${basedir}/target/allure-reports</value>
                         </property>
                     </systemProperties>
