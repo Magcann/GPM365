@@ -85,6 +85,7 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <systemProperties>
+					 <property> <name>allure.results.directory</name> <value>C:\new\target\allure-results</value></property>
                         <property>
                             <name>junit.jupiter.extensions.autodetection.enabled</name>
                             <value>true</value>
