@@ -20,7 +20,7 @@ public class Tests  extends BaseTest{
         $(byName("authLogin")).click();
         $(byName("authLogin")).setValue("m.magnichkin");
         $(byName("password")).click();
-        $(byName("password")).setValue("uW2vHCxhnbwWKwL");
+        $(byName("password")).setValue("22K3XhRfqrGnKkt");
         $(By.cssSelector(".submit-button")).click();
 
 //выполняем навигацию на меню НСИ
@@ -36,12 +36,13 @@ public class Tests  extends BaseTest{
 
 
         //Вводим наименование Бренда
-        $(byXpath("//elma-form-control/elma-type-string/div/input")).sendKeys("auto_test_123456s"); // воткнуть переменную на имя бренд
+        $(byXpath("//elma-form-control/elma-type-string/div/input")).sendKeys("auto_test_240523"); // воткнуть переменную на имя бренд
 //Выбор из справочника рекламодателей
         $(byXpath("(.//*[normalize-space(text()) and normalize-space(.)='Рекламодатель'])[1]/following::button[1]")).click();
 // Выбираем из справочника  бренд
-        $(byXpath("(.//*[normalize-space(text()) and normalize-space(.)='Тест отмены бренда 3'])[1]/preceding::span[8]")).shouldBe(enabled,ofSeconds(5));
-        $(byXpath("(.//*[normalize-space(text()) and normalize-space(.)='Тест отмены бренда 3'])[1]/preceding::span[8]")).click();
+        //$(byXpath("(.//*[normalize-space(text()) and normalize-space(.)='КИРО'])[1]/preceding::span[8]")).shouldBe(enabled,ofSeconds(5));
+        //$(byXpath("(.//*[normalize-space(text()) and normalize-space(.)='КИРО'])[1]/preceding::span[8]")).click();
+        $(byXpath("//td[@class=\"cell___name ng-star-inserted\"]")).click();
 
 
         $(byXpath("(.//*[normalize-space(text()) and normalize-space(.)='Сегмент SMA'])[1]/following::button[1]")).shouldBe(enabled,ofSeconds(5));
@@ -53,8 +54,8 @@ public class Tests  extends BaseTest{
 
         $(byXpath("//*/text()[normalize-space(.)='Сохранить']/parent::*")).shouldBe(enabled,ofSeconds(5)).click();
 
-        $(byText("auto_test_123456s")).shouldBe(enabled,ofSeconds(5));
-        $(byText("auto_test_123456s")).click();
+        $(byText("auto_test_240523")).shouldBe(enabled,ofSeconds(5));
+        $(byText("auto_test_240523")).click();
         Selenide.sleep(5000);
     }
 
