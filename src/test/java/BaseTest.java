@@ -1,6 +1,7 @@
 import com.codeborne.selenide.Configuration;
 import dev.failsafe.internal.util.Assert;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang.RandomStringUtils;
 
 public class BaseTest {
     public BaseTest() {
@@ -26,6 +27,16 @@ public class BaseTest {
         Configuration.headless = false;
         Configuration.fastSetValue=true;
     }
+
+    public String RandomString(int n) {
+
+        int length = n;
+        boolean useLetters = true;
+        boolean useNumbers = false;
+        String generatedString = RandomStringUtils.random(length, useLetters, useNumbers);
+
+        return generatedString;
+    } // генерация случайной строки
 
 
 }
