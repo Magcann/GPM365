@@ -37,7 +37,7 @@ public class Tests  extends BaseTest{
     }
 
     @Test
-    public void testYandex() {
+    public void testGPM() {
         setUp("win_firefox");
         open("http://elmadev.gazprom-media.ru");
 //Это блок авторизации

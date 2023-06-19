@@ -16,7 +16,7 @@ public class StartPage {
         $(byName("authLogin")).click();
         $(byName("authLogin")).setValue("m.magnichkin");
         $(byName("password")).click();
-        $(byName("password")).setValue("Password0");
+        $(byName("password")).setValue("Password");
         $(By.cssSelector(".submit-button")).click();
         return new MainPage();
     }

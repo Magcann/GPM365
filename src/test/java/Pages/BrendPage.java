@@ -16,7 +16,8 @@ public class BrendPage {
     SelenideElement brendAddButton = $x("//button[@class=\"btn btn-primary\"][contains(text(),'Бренд')]");
     SelenideElement nameBrend = $x("//elma-form-control/elma-type-string/div/input");
     SelenideElement chooseRD = $x("(.//*[normalize-space(text()) and normalize-space(.)='Рекламодатель'])[1]/following::button[1]");
-    SelenideElement RD_op1 =$x("//td[@class=\"cell___name ng-star-inserted\"]");
+    SelenideElement RD_op1 =$x("//td[@class=\"cell___name ng-star-inserted\"][1]");
+   // SelenideElement RD_op1 =$x("//tr[@class=\"p-element p-selectable-row ng-star-inserted\"][1]");
     SelenideElement RD_op2_segment =$x("(.//*[normalize-space(text()) and normalize-space(.)='Сегмент SMA'])[1]/following::button[1]");
     SelenideElement RD_segment =$x("//td[@class=\"cell___name ng-star-inserted\"]//span[@class=\"ng-star-inserted\"]");
     SelenideElement saveButton =$x("//button[@data-test=\"createVacancyB\"][contains(text(),\"Сохранить\")]");
